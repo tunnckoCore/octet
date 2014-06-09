@@ -49,4 +49,4 @@ npm run bench
 
 
 ## License
-The MIT License (MIT) [@KrasimirTsonev](https://twitter.com/https://twitter.com/KrasimirTsonev)
+The MIT License (MIT) [@KrasimirTsonev](https://twitter.com/KrasimirTsonev)
