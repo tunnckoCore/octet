@@ -1,7 +1,6 @@
 # octet - AbsurdJS's template engine
 
 [![Build Status](https://travis-ci.org/tunnckoCore/octet.png)](https://travis-ci.org/tunnckoCore/octet) [![Dependencies Status](https://david-dm.org/tunnckoCore/octet/status.svg)](https://david-dm.org/tunnckoCore/octet)
-[![Code Climate](https://codeclimate.com/github/tunnckoCore/octet.png)](https://codeclimate.com/github/tunnckoCore/octet)
 
 > Template engine in just 20 lines, for browser and node. Developed for [AbsurdJS](https://github.com/krasimir/absurd) library.
 
@@ -46,7 +45,8 @@ npm run bench
 ## MIT LICENSE
 The MIT License (MIT)
 
-Copyright (c) 2014 [Charlike Mike Reagent](https://github.com/tunnckoCore) ([@tunnckoCore](https://twitter.com/tunnckoCore)) - npm package, [Krasimir Tsonev](https://github.com/krasimir) ([@KrasimirTsonev](https://twitter.com/https://twitter.com/KrasimirTsonev)) - core
+Copyright (c) 2014 [Charlike Mike Reagent](https://github.com/tunnckoCore) ([@tunnckoCore](https://twitter.com/tunnckoCore)) - npm package
+[Krasimir Tsonev](https://github.com/krasimir) ([@KrasimirTsonev](https://twitter.com/https://twitter.com/KrasimirTsonev)) - creator
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
