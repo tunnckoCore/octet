@@ -1,0 +1,35 @@
+{
+  "name": "octet",
+  "version": "0.0.2",
+  "description": "Template engine in just 20 lines, for browser and node. Used in AbsurdJS.",
+  "main": "index.js",
+  "files": [
+    "index.js", "example.js", "template.octet", "benchmark.js", "test.js", "README.md"
+  ],
+  "author": {
+    "name": "Krasimir Tsonev",
+    "email": "info@krasimirtsonev.com",
+    "url": "http://krasimirtsonev.com"
+  },
+  "keywords": [
+    "javascript",
+    "template",
+    "engine",
+    "abusrdjs",
+    "absurd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tunnckoCore/octet"
+  },
+  "scripts": {
+    "start": "node example.js",
+    "test": "node_modules/mocha/bin/mocha --require should --reporter spec test.js",
+    "bench": "node benchmark.js"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "license": "MIT"
+}
