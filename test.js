@@ -11,19 +11,24 @@ var octet = require('./index');
 var user = {name: 'Tobi'};
 var fs = require('fs');
 
-describe('octet', function(){
-  it('should support locals', function (done) {
-    var path = fs.readFileSync('./template.octet');
-    var locals = { user: user };
-    octet(path.toString(), locals, function (err, html) {
+describe('octet:', function() {
+  it('should support locals', function(done) {
+    var path = fs.readFileSync('./fixture.octet');
+    var locals = {user: user};
+    octet(path.toString(), locals, function(err, html) {
       if (err) return done(err);
       html.should.equal('<p>Tobi</p>');
       done();
     })
   });
-  it('should support helpers', function (done) {
+  it('should support helpers', function(done) {
     var path = '<p><%this.uppercase(this.user.name)%></p>';
-    var locals = { user: user, uppercase: function (str) {return str.toUpperCase()} };
+    var locals = {
+      user: user,
+      uppercase: function(str) {
+        return str.toUpperCase();
+      }
+    };
 
     octet(path, locals, function(err, html){
       if (err) return done(err);
@@ -31,9 +36,9 @@ describe('octet', function(){
       done();
     });
   });
-  it('should support sync call', function (done) {
+  it('should support sync call', function(done) {
     var path = '<p><%this.user.name%></p>';
-    var locals = { user: user};
+    var locals = {user: user};
 
     var sync = octet(path, locals);
     if (sync.err == null) {
@@ -42,8 +47,8 @@ describe('octet', function(){
     } else done(sync.err)
   });
   it('should support caching', function(done){
-    var path = fs.readFileSync('./template.octet').toString();
-    var locals = { user: user, cache: true };
+    var path = fs.readFileSync('./fixture.octet').toString();
+    var locals = {user: user, cache: true};
 
     octet(path, locals, function(err, html){
       if (err) return done(err);
