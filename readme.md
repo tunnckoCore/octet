@@ -11,7 +11,7 @@ npm test
 
 
 ## Usage
-> For more use-cases see the [tests](./test.js)
+> For more use-cases see the [tests](./test.js) and [examples](./examples)
 
 ```js
 var octet = require('octet');
@@ -20,7 +20,7 @@ var html = octet('<p><%this.user.name%></p>', {user:{name:'John'}});
 //=> <p>John</p>
 console.log('Sync call response: ', html);
 ```
-You can also add helper functions like so (+async variant):
+You can also add **helper functions** like so (+async variant):
 ```js
 var octet = require('octet');
 
@@ -39,7 +39,6 @@ octet('<p><%this.uppercase(this.user.name)%></p>', {
   console.log('Async call response: ', html);
 });
 ``` 
-
 
 
 ## Author

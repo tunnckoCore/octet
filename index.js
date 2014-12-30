@@ -33,4 +33,4 @@ module.exports = function octet(html, options, done) {
     console.error("'" + err.message + "'", " in \n\nCode:\n", code, "\n");
     return {err: err, res: null};
   }
-}
+};
