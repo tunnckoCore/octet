@@ -1,6 +1,6 @@
 {
   "name": "octet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript template engine in just 20 lines, for browser and node. Used in AbsurdJS by Krasimir Tsonev.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
