@@ -1,35 +1,39 @@
 {
   "name": "octet",
   "version": "0.0.2",
-  "description": "Template engine in just 20 lines, for browser and node. Used in AbsurdJS.",
-  "main": "index.js",
-  "files": [
-    "index.js", "example.js", "template.octet", "benchmark.js", "test.js", "README.md"
-  ],
+  "description": "Javascript template engine in just 20 lines, for browser and node. Used in AbsurdJS by Krasimir Tsonev.",
+  "scripts": {
+    "lint": "jshint index.js && jscs index.js --reporter inline",
+    "test": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
+  },
   "author": {
-    "name": "Krasimir Tsonev",
-    "email": "info@krasimirtsonev.com",
-    "url": "http://krasimirtsonev.com"
+    "name": "Charlike Make Reagent",
+    "email": "mameto_100@mail.bg",
+    "url": "https://github.com/tunnckoCore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tunnckoCore/octet.git"
   },
   "keywords": [
     "javascript",
     "template",
     "engine",
     "abusrdjs",
-    "absurd"
+    "absurd",
+    "micro",
+    "microjs"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tunnckoCore/octet"
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tunnckoCore/octet/blob/master/license.md"
   },
-  "scripts": {
-    "start": "node example.js",
-    "test": "node_modules/mocha/bin/mocha --require should --reporter spec test.js",
-    "bench": "node benchmark.js"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "istanbul-harmony": "^0.3.1",
     "mocha": "*",
-    "should": "*"
-  },
-  "license": "MIT"
+    "mocha-lcov-reporter": "^0.0.1"
+  }
 }
