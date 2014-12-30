@@ -1,5 +1,4 @@
-var octet = require('./index')
-    fs = require('fs');
+var octet = require('./index');
 
 var html = octet('<p><%this.user.name%></p>', {user:{name:'John'}});
 //=> <p>John</p>

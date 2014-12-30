@@ -1,6 +1,15 @@
-var octet = require('./index'),
-    user = { name: 'Tobi' },
-    fs = require('fs');
+/**
+ * octet <https://github.com/tunnckoCore/octet>
+ *
+ * Copyright (c) 2014 Charlike Mike Reagent, contributors.
+ * Released under the MIT license.
+ */
+
+'use strict';
+
+var octet = require('./index');
+var user = {name: 'Tobi'};
+var fs = require('fs');
 
 describe('octet', function(){
   it('should support locals', function (done) {

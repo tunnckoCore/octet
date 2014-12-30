@@ -1,4 +1,13 @@
-module.exports = function(html, options, done) {
+/**
+ * octet <https://github.com/tunnckoCore/octet>
+ *
+ * Copyright (c) 2014 Charlike Mike Reagent, contributors.
+ * Released under the MIT license.
+ */
+
+'use strict';
+
+module.exports = function octet(html, options, done) {
   var re = /<%([^%>]+)?%>/g,
   reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g,
   code = 'var r=[];\n',
