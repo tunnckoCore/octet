@@ -8,21 +8,24 @@
 'use strict';
 
 var octet = require('./index');
-var user = {name: 'Tobi'};
+var assert = require('assert');
+var user = {name: 'Charlike'};
 var fs = require('fs');
 
 describe('octet:', function() {
   it('should support locals', function(done) {
-    var path = fs.readFileSync('./fixture.octet');
+    var template = fs.readFileSync('./fixture.octet').toString();
     var locals = {user: user};
-    octet(path.toString(), locals, function(err, html) {
-      if (err) return done(err);
-      html.should.equal('<p>Tobi</p>');
+    octet(template, locals, function(err, html) {
+      if (err) {
+        return done(err);
+      }
+      assert.strictEqual(html, '<p>Charlike</p>');
       done();
     })
   });
   it('should support helpers', function(done) {
-    var path = '<p><%this.uppercase(this.user.name)%></p>';
+    var template = '<p><%this.uppercase(this.user.name)%></p>';
     var locals = {
       user: user,
       uppercase: function(str) {
@@ -30,37 +33,45 @@ describe('octet:', function() {
       }
     };
 
-    octet(path, locals, function(err, html){
-      if (err) return done(err);
-      html.should.equal('<p>TOBI</p>');
+    octet(template, locals, function(err, html) {
+      if (err) {
+        return done(err);
+      }
+      assert.strictEqual(html, '<p>CHARLIKE</p>');
       done();
     });
   });
   it('should support sync call', function(done) {
-    var path = '<p><%this.user.name%></p>';
+    var template = '<p><%this.user.name%></p>';
     var locals = {user: user};
 
-    var sync = octet(path, locals);
-    if (sync.err == null) {
-      sync.res.should.equal('<p>Tobi</p>');
+    var sync = octet(template, locals);
+    if (sync.err === null) {
+      assert.strictEqual(sync.res, '<p>Charlike</p>');
       done()
-    } else done(sync.err)
+    } else {
+      done(sync.err)
+    }
   });
-  it('should support caching', function(done){
-    var path = fs.readFileSync('./fixture.octet').toString();
+  it('should support caching', function(done) {
+    var template = fs.readFileSync('./fixture.octet').toString();
     var locals = {user: user, cache: true};
 
-    octet(path, locals, function(err, html){
-      if (err) return done(err);
+    octet(template, locals, function(err, html) {
+      if (err) {
+        return done(err);
+      }
 
-      fs.readFile = function(path){
-        done(new Error('fs.readFile() called with ' + path));
+      fs.readFile = function(path) {
+        done(new Error('fs.readFile() called with path:'));
       };
-      html.should.equal('<p>Tobi</p>');
+      assert.strictEqual(html, '<p>Charlike</p>');
 
-      octet(path, locals, function(err, html){
-        if (err) return done(err);
-        html.should.equal('<p>Tobi</p>');
+      octet(template, locals, function(err, html) {
+        if (err) {
+          return done(err);
+        }
+        assert.strictEqual(html, '<p>Charlike</p>');
         done();
       });
     });
