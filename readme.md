@@ -1,6 +1,7 @@
 ## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url]
 
-> Javascript template engine in just 20 lines, for browser and node. Used in [AbsurdJS](https://github.com/krasimir/absurd) by [Krasimir Tsonev](http://krasimirtsonev.com).
+> Javascript template engine in just 20 lines, for browser and node.  
+Used in [AbsurdJS](https://github.com/krasimir/absurd) by [Krasimir Tsonev](http://krasimirtsonev.com).
 
 ## Install
 ```bash
