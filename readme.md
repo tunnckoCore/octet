@@ -10,6 +10,14 @@ npm test
 ```
 
 
+## Include in html
+> After that you can use directly `octet` function.
+
+```html
+<script src="https://cdn.rawgit.com/tunnckoCore/octet/master/dist/octet.js"></script>
+```
+
+
 ## Usage
 > For more use-cases see the [tests](./test.js) and [examples](./examples)
 
@@ -20,6 +28,7 @@ var html = octet('<p><%this.user.name%></p>', {user:{name:'John'}});
 //=> <p>John</p>
 console.log('Sync call response: ', html);
 ```
+
 You can also add **helper functions** like so (+async variant):
 ```js
 var octet = require('octet');
