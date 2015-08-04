@@ -12,7 +12,9 @@
   "dependencies": {},
   "devDependencies": {
     "assertit": "^0.1.0",
+    "browserify": "^11.0.1",
     "template-helpers": "^0.3.2",
+    "uglify-js": "^2.4.24",
     "utils": "^0.2.2"
   },
   "keywords": [
