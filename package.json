@@ -1,6 +1,6 @@
 {
   "name": "octet",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "1kb template engine for the browser and nodejs. Support helpers, partials and more.",
   "repository": "tunnckoCore/octet",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
