@@ -7,6 +7,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "npm run bundle && npm run bundle-uglify && npm run standalone && npm run standalone-uglify",
+    "bundle": "browserify -do dist/octet.js index.js",
+    "bundle-uglify": "uglifyjs -m -c -o dist/octet.min.js dist/octet.js",
+    "standalone": "browserify -s octet -do dist/octet.standalone.js index.js",
+    "standalone-uglify": "uglifyjs -m -c -o dist/octet.standalone.min.js dist/octet.standalone.js",
     "test": "standard && node test.js"
   },
   "dependencies": {},
