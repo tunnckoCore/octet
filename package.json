@@ -1,7 +1,7 @@
 {
   "name": "octet",
   "version": "1.0.1",
-  "description": "Javascript template engine in just 20 lines, for browser and node. Used in AbsurdJS.",
+  "description": "1kb template engine for the browser and nodejs. Support helpers, partials and more.",
   "repository": "tunnckoCore/octet",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "main": "index.js",

@@ -1,6 +1,6 @@
 # [octet][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
-> Javascript template engine in just 20 lines, for browser and node.  
+> 1kb template engine for the browser and nodejs. Support helpers, partials and more.  
 Used in [AbsurdJS](http://absurdjs.com/).
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
