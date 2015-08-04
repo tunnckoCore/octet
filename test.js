@@ -71,23 +71,4 @@ test('octet:', function () {
     test.equal(html, '<p>Charlike</p>')
     done()
   })
-  test('should support caching', function (done) {
-    var template = fs.readFileSync('./fixture.octet', 'utf8')
-    var locals = {user: user, cache: true}
-
-    octet(template, locals, function (err, first) {
-      test.ifError(err)
-
-      fs.readFile = function (path) {
-        done(new Error('fs.readFile() called with path:'))
-      }
-      test.equal(first, '<h1><p>Charlike</p></h1>')
-
-      octet(template, locals, function (err, html) {
-        test.ifError(err)
-        test.equal(html, '<h1><p>Charlike</p></h1>')
-        done()
-      })
-    })
-  })
 })
