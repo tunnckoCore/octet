@@ -1,7 +1,7 @@
 # [octet][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
 > 1kb template engine for the browser and nodejs. Support helpers, partials and more.  
-Used in [AbsurdJS](http://absurdjs.com/).
+Used in [AbsurdJS Apps](http://absurdjs.com/).
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
@@ -11,6 +11,25 @@ Used in [AbsurdJS](http://absurdjs.com/).
 npm i octet --save
 npm test
 ```
+
+
+## Features
+- minimal, yet simple
+- used in production by [AbsurdJS Apps](http://absurdjs.com/)
+- zero dependencies - just [1kb minified](./dist/dush.standalone.min.js)
+- works on every browser, should **even works on IE6**
+- works on the server with just `require('octet')`
+- plays well with [Browserify](https://browserify.org) and [BrowserifyCDN](https://brcdn.org)
+- support helpers and partials
+- have async and synchronous api
+- available on CDNs - [BrowserifyCDN](https://www.brcdn.org/?module=octet&version=list) and [RawGit CDN](https://rawgit.com/)
+
+
+## Use it
+- [dist/octet.min.js](./dist/dush.min.js) (*1kb*)
+- [dist/octet.standalone.min.js](./dist/dush.standalone.min.js) (*1.2kb*)
+- [octet on BrowserifyCDN](https://www.brcdn.org/?module=octet&version=list)
+- [octet on RawGit CDN](https://cdn.rawgit.com/tunnckoCore/octet/master/dist/octet.standalone.min.js)
 
 
 ## Usage
