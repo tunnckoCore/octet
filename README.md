@@ -1,7 +1,7 @@
 # [octet][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
 > Javascript template engine in just 20 lines, for browser and node.  
-Used in AbsurdJS.
+Used in [AbsurdJS](http://absurdjs.com/).
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
@@ -50,7 +50,7 @@ octet(template, utils._, function (err, res) {
 })
 ```
 
-or without any libraries, but with custom helpers
+or without any libraries, but with **custom helpers**
 
 ```js
 var octet = require('octet')
@@ -67,6 +67,15 @@ octet('<p><%this.uppercase(this.user.name)%></p>', {
   console.log(html) //=> 'JOHN UPPERCASED'
 })
 ```
+
+
+## Related
+- [absurd](http://absurdjs.com/): JavaScript library with superpowers - http://absurdjs.com/
+- [j140](https://github.com/tunnckoCore/j140): Javascript template engine in just 140 bytes, for browser and node - by Jed Schmidt
+- [riot](https://muut.com/riotjs/): A React- like, 3.5K user interface library
+- [template](https://github.com/jonschlinkert/template): Render templates using any engine. Supports, layouts, pages, partials and custom template types. Use template… [more](https://github.com/jonschlinkert/template)
+- [verb](https://github.com/assemble/verb): Documentation generator for GitHub projects. Extremely powerful, easy to use, can generate anything from API… [more](https://github.com/assemble/verb)
+
 
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/octet/issues/new).  
