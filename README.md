@@ -12,11 +12,82 @@ npm i octet --save
 ```
 
 
+## Features
+- minimal, yet simple
+  + 845 bytes - browserified, gzipped and minified
+  + 1676 bytes - browserified and minified
+- zero dependencies
+- works on every browser, should **even works on IE6 or at least IE8**
+- works on the server with just `require('octet')`
+- plays well with [Browserify](https://browserify.org) and [BrowserifyCDN](https://brcdn.org)
+- support helpers and partials
+- available on CDNs - [BrowserifyCDN](https://www.brcdn.org/?module=octet&version=list) and [RawGit CDN](https://rawgit.com/)
+
+
+## Use it
+- [dist/octet.min.js](./dist/octet.min.js) (*1.6kb*)
+- [dist/octet.standalone.min.js](./dist/octet.standalone.min.js) (*1.9kb*)
+- [octet on BrowserifyCDN](https://www.brcdn.org/?module=octet&version=list)
+- [octet on RawGit CDN](https://cdn.rawgit.com/tunnckoCore/octet/master/dist/octet.standalone.min.js)
+
+
 ## Usage
-> For more use-cases see the [tests](./test.js)
+> For more use-cases see the [tests](./test.js).  
+You can use any "helpers" lib, for example [utils](https://github.com/jonschlinkert/utils).
 
 ```js
 var octet = require('octet')
+var utils = require('utils')
+
+octet.render('foo <%this.uppercase("bar")%> baz', utils._)
+//=> 'foo BAR baz'
+```
+
+### [octet](./index#L12)
+> Acts like `.render` by default. Renders given `str` with `locals`.
+
+- `str` **{String}** template to populate with `locals`
+- `locals` **{Object}** locals object
+- `returns` **{String}** rendered string
+
+**Example**
+
+```js
+octet('foo <%this.bar%> baz <%this.quux%>', {bar: 'bar', quux: 'QUUX'})
+//=> 'foo bar baz QUUX'
+```
+
+### [.render](./index#L16)
+> Renders given `str` with `locals`.
+
+- `str` **{String}** template to populate with `locals`
+- `locals` **{Object}** locals object
+- `returns` **{String}** rendered string
+
+**Example**
+
+```js
+octet.render('Hello <%this.place%> and <%this.user.name%>!', {
+  place: 'world',
+  user: {
+    name: 'Charlike'
+  }
+})
+//=> 'Hello world and Charlike!'
+```
+
+### [.compile](./index#L20)
+> Compiles given string and returns function which accepts `locals` object.
+
+- `str` **{String}** template to populate
+- `returns` **{Function}** which accepts `locals` objects
+
+**Example**
+
+```js
+var fn = octet.compile('Hello <%this.place%> and <%this.user.name%>!')
+fn({place: 'world', user: {name: 'Charlike'}})
+//=> 'Hello world and Charlike!'
 ```
 
 
