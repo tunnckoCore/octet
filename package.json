@@ -43,5 +43,10 @@
     "nodejs",
     "template",
     "tpl"
-  ]
+  ],
+  "standard": {
+    "ignore": [
+      "dist/**"
+    ]
+  }
 }
