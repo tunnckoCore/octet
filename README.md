@@ -91,6 +91,21 @@ fn({place: 'world', user: {name: 'Charlike'}})
 ```
 
 
+## Related
+- [j140](https://github.com/tunnckoCore/j140): Template engine in 140 bytes, by @jed Schmidt. Support helpers, partials and more.
+- [es6-template](https://github.com/tunnckoCore/es6-template): Easy and small template engine for the browser and nodejs.
+- [es6-template-regex](https://github.com/jonschlinkert/es6-template-regex): Regular expression for matching es6 template delimiters in a string.
+- [es6-template-strings](https://github.com/medikoo/es6-template-strings): Compile and resolve template strings notation as specified in ES6
+- [gulp-j140](https://github.com/tunnckoCore/gulp-j140): Gulp plugin for `j140` - template engine in 140 bytes by @jed Schmidt.
+- [gulp-octet](https://github.com/tunnckoCore/gulp-octet): Gulp plugin for `octet` - template engine in just 20 lines - used in AbsurdJS.
+- [gulp-es6-template](https://github.com/tunnckoCore/gulp-es6-template): Gulp plugin for `es6-template` - easy and small template engine.
+- [gulp-es6-template-strings](https://github.com/tunnckoCore/gulp-es6-template-strings): Gulp plugin for `es6-template-strings` package.
+- [jstransformer-es6-template](https://github.com/tunnckoCore/jstransformer-es6-template): es6-template support for JSTransformers
+- [jstransformer-es6-template-strings](https://github.com/jstransformers/jstransformer-es6-template-strings): es6-template-strings support for JSTransformers
+- [jstransformer-octet](https://github.com/jstransformers/jstransformer-octet): octet support for JSTransformers
+- [jstransformer-j140](https://github.com/tunnckoCore/jstransformer-j140): j140 support for JSTransformers
+
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/octet/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
