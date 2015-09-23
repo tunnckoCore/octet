@@ -1,5 +1,16 @@
 
 
+## 3.0.0 - 2015-09-24
+- Release v3.0.0 / npm@v3.0.0
+- bundles and CDNs
+  + browserify, minified, and standalone builds
+  + 845 bytes - browserified, gzipped and minified
+  + 1676 bytes - browserified and minified
+- allow passing custom context
+- drop callback api, use something like `jstransformer`
+- add `.render` and `.compile` methods
+- update boilerplate and refactor
+
 ## 2.0.0 - 2015-08-04
 - Release v2.0.0 / npm@v2.0.0
 - **Heads up**, if have error and dont have callback (sync api) it will throw the err
