@@ -23,4 +23,4 @@
 - nothing special
 
 ## 0.0.0 - 2014-06-09
-- first commits
+- Initial commit

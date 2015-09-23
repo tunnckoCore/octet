@@ -1,1 +1,0 @@
-<h1><%if (this.user.name) { %><p><%this.user.name%></p><%}%></h1>

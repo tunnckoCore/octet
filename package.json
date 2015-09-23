@@ -1,48 +1,23 @@
 {
   "name": "octet",
   "version": "2.0.0",
-  "description": "1kb template engine for the browser and nodejs. Support helpers, partials and more.",
+  "description": "1kb template engine for the browser and nodejs. Support helpers, partials and more. Used in AbsurdJS.",
   "repository": "tunnckoCore/octet",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "npm run bundle && npm run bundle-uglify && npm run standalone && npm run standalone-uglify",
-    "bundle": "browserify -do dist/octet.js index.js",
-    "bundle-uglify": "uglifyjs -m -c -o dist/octet.min.js dist/octet.js",
-    "standalone": "browserify -s octet -do dist/octet.standalone.js index.js",
-    "standalone-uglify": "uglifyjs -m -c -o dist/octet.standalone.min.js dist/octet.standalone.js",
     "test": "standard && node test.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "extend-shallow": "^2.0.1"
+  },
   "devDependencies": {
     "assertit": "^0.1.0",
-    "browserify": "^11.0.1",
-    "template-helpers": "^0.3.2",
-    "uglify-js": "^2.4.24",
     "utils": "^0.2.2"
   },
-  "keywords": [
-    "absurd",
-    "abusrdjs",
-    "browser",
-    "browserify",
-    "cdn",
-    "engine",
-    "ie",
-    "javascript",
-    "js",
-    "jsdelivr",
-    "micro",
-    "microjs",
-    "node",
-    "nodejs",
-    "template",
-    "tpl"
+  "files": [
+    "index.js"
   ],
-  "standard": {
-    "ignore": [
-      "dist/**"
-    ]
-  }
+  "keywords": []
 }

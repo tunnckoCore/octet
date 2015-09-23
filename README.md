@@ -9,27 +9,7 @@ Used in [AbsurdJS Apps](http://absurdjs.com/).
 ## Install
 ```
 npm i octet --save
-npm test
 ```
-
-
-## Features
-- minimal, yet simple
-- used in production by [AbsurdJS Apps](http://absurdjs.com/)
-- zero dependencies - just [1kb minified](./dist/dush.standalone.min.js)
-- works on every browser, should **even works on IE6**
-- works on the server with just `require('octet')`
-- plays well with [Browserify](https://browserify.org) and [BrowserifyCDN](https://brcdn.org)
-- support helpers and partials
-- have async and synchronous api
-- available on CDNs - [BrowserifyCDN](https://www.brcdn.org/?module=octet&version=list) and [RawGit CDN](https://rawgit.com/)
-
-
-## Use it
-- [dist/octet.min.js](./dist/dush.min.js) (*1kb*)
-- [dist/octet.standalone.min.js](./dist/dush.standalone.min.js) (*1.2kb*)
-- [octet on BrowserifyCDN](https://www.brcdn.org/?module=octet&version=list)
-- [octet on RawGit CDN](https://cdn.rawgit.com/tunnckoCore/octet/master/dist/octet.standalone.min.js)
 
 
 ## Usage
@@ -37,63 +17,7 @@ npm test
 
 ```js
 var octet = require('octet')
-
-var data = {
-  planet: {
-    earth: 'World'
-  }
-}
-octet('<h1>Hello <% this.planet.earth %></h1>', data) //=> <h1>Hello World</h1>
-octet('<h1>Hello <% this.planet.earth %></h1>', data, function (err, html) {
-  console.log(html) //=> <h1>Hello World</h1>
-})
 ```
-
-You can also add helper functions, try using [template-helpers](https://github.com/jonschlinkert/template-helpers) or [utils](https://github.com/jonschlinkert/utils)
-
-```js
-var octet = require('octet')
-var utils = require('utils')
-var helpers = require('template-helpers')
-
-var tpl = '<h1><% this.uppercase("foo") %></h1>'
-octet(tpl, helpers._, function (err, res) {
-  if (err) return console.error(err)
-  console.log(err, res) //=> '<h1>FOO</h1>'
-})
-
-var template = '<h1><% this.sum([1, 2, 3]) %></h1>'
-octet(template, utils._, function (err, res) {
-  if (err) return console.error(err)
-  console.log(err, res) //=> '<h1>6</h1>'
-})
-```
-
-or without any libraries, but with **custom helpers**
-
-```js
-var octet = require('octet')
-
-octet('<p><%this.uppercase(this.user.name)%></p>', {
-  uppercase: function (str) {
-    return str.toUpperCase()
-  },
-  user: {
-    name: 'john uppercased'
-  }
-}, function (err, html) {
-  if (err) return console.error(err)
-  console.log(html) //=> 'JOHN UPPERCASED'
-})
-```
-
-
-## Related
-- [absurd](http://absurdjs.com/): JavaScript library with superpowers - http://absurdjs.com/
-- [j140](https://github.com/tunnckoCore/j140): Javascript template engine in just 140 bytes, for browser and node - by Jed Schmidt
-- [riot](https://muut.com/riotjs/): A React- like, 3.5K user interface library
-- [template](https://github.com/jonschlinkert/template): Render templates using any engine. Supports, layouts, pages, partials and custom template types. Use template… [more](https://github.com/jonschlinkert/template)
-- [verb](https://github.com/assemble/verb): Documentation generator for GitHub projects. Extremely powerful, easy to use, can generate anything from API… [more](https://github.com/assemble/verb)
 
 
 ## Contributing
@@ -123,7 +47,7 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [coveralls-img]: https://img.shields.io/coveralls/tunnckoCore/octet.svg
 
 [david-url]: https://david-dm.org/tunnckoCore/octet
-[david-img]: https://img.shields.io/david/dev/tunnckoCore/octet.svg
+[david-img]: https://img.shields.io/david/tunnckoCore/octet.svg
 
 [standard-url]: https://github.com/feross/standard
 [standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
@@ -147,5 +71,5 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [freenode-url]: http://webchat.freenode.net/?channels=charlike
 [freenode-img]: https://img.shields.io/badge/freenode-%23charlike-5654a4.svg
 
-[new-message-url]: https://github.com/tunnckoCore/messages
+[new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
